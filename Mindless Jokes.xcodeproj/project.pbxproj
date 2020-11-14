@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3F61FC255F68A200402273 /* AddAJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */; };
 		7F567F15255DBBD500D44B52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F14255DBBD500D44B52 /* AppDelegate.swift */; };
 		7F567F17255DBBD500D44B52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F16255DBBD500D44B52 /* SceneDelegate.swift */; };
 		7F567F19255DBBD500D44B52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F18255DBBD500D44B52 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAJokeViewController.swift; sourceTree = "<group>"; };
 		7F567F11255DBBD500D44B52 /* Mindless Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mindless Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F567F14255DBBD500D44B52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F567F16255DBBD500D44B52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7F567F1D255DBBD700D44B52 /* Assets.xcassets */,
 				7F567F1F255DBBD700D44B52 /* LaunchScreen.storyboard */,
 				7F567F22255DBBD700D44B52 /* Info.plist */,
+				7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */,
 			);
 			path = "Mindless Jokes";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F567F19255DBBD500D44B52 /* ViewController.swift in Sources */,
+				7F3F61FC255F68A200402273 /* AddAJokeViewController.swift in Sources */,
 				7F567F15255DBBD500D44B52 /* AppDelegate.swift in Sources */,
 				7F567F17255DBBD500D44B52 /* SceneDelegate.swift in Sources */,
 			);
