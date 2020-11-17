@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         jokeViewLabel.text = "testing"
         view.addSubview(jokeViewLabel)
         jokeViewLabel.textColor = .black
-        jokeViewLabel.frame = CGRect(x: 100, y: 100, width: 200, height: 52)
+        jokeViewLabel.frame = CGRect(x: 120, y: 100, width: 200, height: 52)
         jokeViewLabel.textAlignment = .center
         
         
@@ -40,14 +40,18 @@ class ViewController: UIViewController {
         addJokeButton.setTitleColor(.systemBlue, for: .normal)
         addJokeButton.frame = CGRect(x: 342, y: 44, width: 52, height: 52)
         addJokeButton.addTarget(self, action: #selector(didTapAddJokeButton), for: .touchUpInside)
+        addJokeButton.contentVerticalAlignment = .center
+        addJokeButton.contentHorizontalAlignment = .center
         
         //creating 'Next Joke' button
         nextJokeButton.setTitle("Next Joke", for: .normal)
         view.addSubview(nextJokeButton)
         nextJokeButton.backgroundColor = .clear
         nextJokeButton.setTitleColor(.systemBlue, for: .normal)
-        nextJokeButton.frame = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+        nextJokeButton.frame = CGRect(x: 135, y: 800, width: 150, height: 52)
         nextJokeButton.addTarget(self, action: #selector(didTapNextJokeButton), for: .touchUpInside)
+        nextJokeButton.contentVerticalAlignment = .center
+        nextJokeButton.contentHorizontalAlignment = .center
         
     }
     
