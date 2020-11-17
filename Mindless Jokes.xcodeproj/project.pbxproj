@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F02C702256433D800D73F5C /* JokeNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02C701256433D800D73F5C /* JokeNetworkController.swift */; };
+		7F02C7132564348700D73F5C /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02C7122564348700D73F5C /* JokeModel.swift */; };
+		7F3F61FC255F68A200402273 /* AddAJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */; };
 		7F567F15255DBBD500D44B52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F14255DBBD500D44B52 /* AppDelegate.swift */; };
 		7F567F17255DBBD500D44B52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F16255DBBD500D44B52 /* SceneDelegate.swift */; };
 		7F567F19255DBBD500D44B52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F567F18255DBBD500D44B52 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F02C701256433D800D73F5C /* JokeNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeNetworkController.swift; sourceTree = "<group>"; };
+		7F02C7122564348700D73F5C /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAJokeViewController.swift; sourceTree = "<group>"; };
 		7F567F11255DBBD500D44B52 /* Mindless Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mindless Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F567F14255DBBD500D44B52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F567F16255DBBD500D44B52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F02C700256433C700D73F5C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7F02C701256433D800D73F5C /* JokeNetworkController.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		7F02C70D2564340000D73F5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F567F18255DBBD500D44B52 /* ViewController.swift */,
+				7F3F61FB255F68A200402273 /* AddAJokeViewController.swift */,
+				7F02C700256433C700D73F5C /* Networking */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7F02C70E2564340700D73F5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F567F1A255DBBD500D44B52 /* Main.storyboard */,
+				7F567F1F255DBBD700D44B52 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7F02C7102564345700D73F5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F567F14255DBBD500D44B52 /* AppDelegate.swift */,
+				7F567F16255DBBD500D44B52 /* SceneDelegate.swift */,
+				7F567F1D255DBBD700D44B52 /* Assets.xcassets */,
+				7F567F22255DBBD700D44B52 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F02C7112564347400D73F5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F02C7122564348700D73F5C /* JokeModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		7F567F08255DBBD500D44B52 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +151,10 @@
 		7F567F13255DBBD500D44B52 /* Mindless Jokes */ = {
 			isa = PBXGroup;
 			children = (
-				7F567F14255DBBD500D44B52 /* AppDelegate.swift */,
-				7F567F16255DBBD500D44B52 /* SceneDelegate.swift */,
-				7F567F18255DBBD500D44B52 /* ViewController.swift */,
-				7F567F1A255DBBD500D44B52 /* Main.storyboard */,
-				7F567F1D255DBBD700D44B52 /* Assets.xcassets */,
-				7F567F1F255DBBD700D44B52 /* LaunchScreen.storyboard */,
-				7F567F22255DBBD700D44B52 /* Info.plist */,
+				7F02C7112564347400D73F5C /* Models */,
+				7F02C70E2564340700D73F5C /* Views */,
+				7F02C70D2564340000D73F5C /* Controllers */,
+				7F02C7102564345700D73F5C /* Supporting Files */,
 			);
 			path = "Mindless Jokes";
 			sourceTree = "<group>";
@@ -259,7 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F567F19255DBBD500D44B52 /* ViewController.swift in Sources */,
+				7F3F61FC255F68A200402273 /* AddAJokeViewController.swift in Sources */,
+				7F02C7132564348700D73F5C /* JokeModel.swift in Sources */,
 				7F567F15255DBBD500D44B52 /* AppDelegate.swift in Sources */,
+				7F02C702256433D800D73F5C /* JokeNetworkController.swift in Sources */,
 				7F567F17255DBBD500D44B52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
