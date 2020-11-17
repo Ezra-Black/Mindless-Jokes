@@ -10,8 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     
     let jokeViewLabel = UILabel()
+    let punchlineLabel = UILabel()
     let addJokeButton = UIButton()
     let nextJokeButton = UIButton()
+    var networkingController = JokeController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +28,23 @@ class ViewController: UIViewController {
         
         
         //creating JokeViewLabel
-        jokeViewLabel.text = "testing"
+        jokeViewLabel.text = ""
         view.addSubview(jokeViewLabel)
         jokeViewLabel.textColor = .black
-        jokeViewLabel.frame = CGRect(x: 120, y: 100, width: 200, height: 52)
+        jokeViewLabel.frame = CGRect(x: 20, y: 193, width: 374, height: 256)
         jokeViewLabel.textAlignment = .center
+        jokeViewLabel.numberOfLines = 50
+        jokeViewLabel.allowsDefaultTighteningForTruncation = true
+        
+        //creating PunchlineLabel
+        
+        punchlineLabel.text = ""
+        view.addSubview(punchlineLabel)
+        punchlineLabel.textColor = .black
+        punchlineLabel.frame = CGRect(x: 20, y: 520, width: 374, height: 235)
+        punchlineLabel.textAlignment = .center
+        punchlineLabel.numberOfLines = 50
+        punchlineLabel.allowsDefaultTighteningForTruncation = true
         
         
         //creating Navigation button
@@ -53,6 +67,16 @@ class ViewController: UIViewController {
         nextJokeButton.contentVerticalAlignment = .center
         nextJokeButton.contentHorizontalAlignment = .center
         
+       
+        networkingController.networkRequest {
+            DispatchQueue.main.async {
+                let joke = self.networkingController.joke[0].setup
+                let punchline = self.networkingController.joke[0].punchline
+                self.jokeViewLabel.text = "\(joke)"
+                self.punchlineLabel.text = "\(punchline)"
+            }
+        }
+        
     }
     
     
@@ -64,8 +88,19 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapNextJokeButton() {
-        
+        networkingController.networkRequest {
+            DispatchQueue.main.async {
+                let joke = self.networkingController.joke[0].setup
+                let punchline = self.networkingController.joke[0].punchline
+                self.jokeViewLabel.text = "\(joke)"
+                self.punchlineLabel.text = "\(punchline)"
+            }
+        }
     }
+    
+    //Networking Actions
+    
+    
 
 
 }
