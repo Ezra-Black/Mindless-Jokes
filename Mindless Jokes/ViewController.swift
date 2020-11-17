@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     let jokeViewLabel = UILabel()
     let addJokeButton = UIButton()
-    
+    let nextJokeButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,14 @@ class ViewController: UIViewController {
         addJokeButton.frame = CGRect(x: 342, y: 44, width: 52, height: 52)
         addJokeButton.addTarget(self, action: #selector(didTapAddJokeButton), for: .touchUpInside)
         
+        //creating 'Next Joke' button
+        nextJokeButton.setTitle("Next Joke", for: .normal)
+        view.addSubview(nextJokeButton)
+        nextJokeButton.backgroundColor = .clear
+        nextJokeButton.setTitleColor(.systemBlue, for: .normal)
+        nextJokeButton.frame = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+        nextJokeButton.addTarget(self, action: #selector(didTapNextJokeButton), for: .touchUpInside)
+        
     }
     
     
@@ -49,6 +57,10 @@ class ViewController: UIViewController {
         let rootVC = AddAJokeViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         present(navVC, animated: true)
+    }
+    
+    @objc private func didTapNextJokeButton() {
+        
     }
 
 
